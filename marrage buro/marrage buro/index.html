@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find your perfect life partner with ShubhVivah Marriage Bureau - Trusted matchmaking service with thousands of verified profiles." />
+  <title>ShubhVivah Marriage Bureau | Find Your Perfect Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">💍</span>
+        <span class="logo-text">ShubhVivah</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#profiles" class="nav-link">Profiles</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#success" class="nav-link">Success Stories</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-login" onclick="openModal('loginModal')">Login</button>
+        <button class="btn-register" onclick="openModal('registerModal')">Register Free</button>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION with Scrolling Background ===== -->
+  <section class="hero" id="home">
+    <div class="hero-slides">
+      <div class="slide active" style="background-image: url('img1.png')"></div>
+      <div class="slide" style="background-image: url('img2.png')"></div>
+      <div class="slide" style="background-image: url('img3.png')"></div>
+      <div class="slide" style="background-image: url('img4.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ Trusted by 50,000+ Happy Families</div>
+      <h1 class="hero-title">
+        Start Your<br />
+        <span class="gold-text">Forever Journey</span><br />
+        Find Your Soulmate
+      </h1>
+      <p class="hero-subtitle">India's most trusted marriage bureau connecting hearts across communities, castes, and cities with dignity and care.</p>
+      <div class="hero-search">
+        <div class="search-group">
+          <label>I am a</label>
+          <select id="gender">
+            <option>Bride</option>
+            <option>Groom</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label>Age Range</label>
+          <select id="ageRange">
+            <option>18-25</option>
+            <option>26-30</option>
+            <option>31-35</option>
+            <option>36-40</option>
+            <option>41+</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label>Religion</label>
+          <select id="religion">
+            <option>All Religions</option>
+            <option>Hindu</option>
+            <option>Muslim</option>
+            <option>Christian</option>
+            <option>Sikh</option>
+            <option>Jain</option>
+            <option>Buddhist</option>
+          </select>
+        </div>
+        <button class="btn-search" onclick="searchProfiles()">🔍 Find Matches</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number" data-target="50000">0</span><span>+</span><p>Members</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-number" data-target="12000">0</span><span>+</span><p>Marriages</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-number" data-target="98">0</span><span>%</span><p>Satisfaction</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-number" data-target="25">0</span><span>+</span><p>Years Trust</p></div>
+      </div>
+    </div>
+    <div class="slide-indicators">
+      <button class="indicator active" onclick="goToSlide(0)"></button>
+      <button class="indicator" onclick="goToSlide(1)"></button>
+      <button class="indicator" onclick="goToSlide(2)"></button>
+      <button class="indicator" onclick="goToSlide(3)"></button>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Who We Are</span>
+        <h2 class="section-title">About <span class="gold-text">ShubhVivah</span></h2>
+        <p class="section-subtitle">Dedicated to creating beautiful, lasting bonds for over 25 years</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="img2.png" alt="Happy Couple" class="about-img" />
+          <div class="about-badge-card">
+            <span class="badge-icon">🏆</span>
+            <div>
+              <strong>Award Winning</strong>
+              <p>Best Marriage Bureau 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h3>We Believe in <span class="gold-text">Perfect Matches</span></h3>
+          <p>ShubhVivah Marriage Bureau has been uniting families and hearts across India for over 25 years. We understand that marriage is the most sacred bond in life, and we treat every profile with utmost care, respect, and privacy.</p>
+          <p>Our dedicated team of experienced matchmakers personally verifies each profile and works tirelessly to find the most compatible partners based on your preferences, values, and family background.</p>
+          <div class="about-features">
+            <div class="about-feat"><span>✅</span> 100% Verified Profiles</div>
+            <div class="about-feat"><span>🔒</span> Complete Privacy</div>
+            <div class="about-feat"><span>👨‍👩‍👧</span> Family Involvement</div>
+            <div class="about-feat"><span>🌐</span> Pan India Network</div>
+            <div class="about-feat"><span>💯</span> No Fake Profiles</div>
+            <div class="about-feat"><span>📞</span> 24/7 Support</div>
+          </div>
+          <button class="btn-primary" onclick="openModal('registerModal')">Join Now — It's Free!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why Choose Us</span>
+        <h2 class="section-title">Our <span class="gold-text">Premium Features</span></h2>
+        <p class="section-subtitle">Everything you need to find your perfect life partner</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Advanced Search</h3>
+          <p>Filter profiles by age, religion, caste, profession, education, location and much more to find your exact match.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Verified Profiles</h3>
+          <p>Every profile is manually verified with Aadhar, PAN, and degree certificates. Zero fake profiles guaranteed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>100% Privacy</h3>
+          <p>Your personal contact details are hidden until you mutually connect. Complete data security and privacy assured.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Personal Matchmaker</h3>
+          <p>Dedicated relationship expert assists you personally throughout your journey to find the perfect match.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Easy Communication</h3>
+          <p>Send interest, chat securely, and connect with families through our safe in-app messaging system.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Affordable Plans</h3>
+          <p>Multiple subscription plans including a completely free basic plan. Premium features at very affordable prices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h3>Smart AI Matching</h3>
+          <p>Our intelligent algorithm suggests the most compatible profiles based on your preferences and horoscope.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>Home Visits</h3>
+          <p>Our counselors can visit your home for consultation and to assist you in the profile selection process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROFILES SECTION ===== -->
+  <section class="profiles-section" id="profiles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Browse Profiles</span>
+        <h2 class="section-title">Featured <span class="gold-text">Profiles</span></h2>
+        <p class="section-subtitle">Find your compatible match from thousands of verified profiles</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProfiles('all', this)">All Profiles</button>
+        <button class="filter-btn" onclick="filterProfiles('bride', this)">Brides</button>
+        <button class="filter-btn" onclick="filterProfiles('groom', this)">Grooms</button>
+        <button class="filter-btn" onclick="filterProfiles('hindu', this)">Hindu</button>
+        <button class="filter-btn" onclick="filterProfiles('muslim', this)">Muslim</button>
+        <button class="filter-btn" onclick="filterProfiles('christian', this)">Christian</button>
+      </div>
+
+      <div class="profiles-grid" id="profilesGrid">
+        <!-- Profiles injected by JS -->
+      </div>
+      <div class="load-more-wrap">
+        <button class="btn-load-more" onclick="loadMoreProfiles()">View All Profiles →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Simple Steps</span>
+        <h2 class="section-title">How It <span class="gold-text">Works</span></h2>
+        <p class="section-subtitle">Finding your soulmate is just 4 easy steps away</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📝</div>
+          <h3>Create Profile</h3>
+          <p>Register for free and create your detailed profile with photos, education, profession and family details.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🔍</div>
+          <h3>Search & Browse</h3>
+          <p>Use advanced filters to search thousands of verified profiles and find your most compatible matches.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">💌</div>
+          <h3>Send Interest</h3>
+          <p>Send interest to profiles you like. Chat securely and get to know each other better before meeting.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <div class="step-icon">💍</div>
+          <h3>Get Married!</h3>
+          <p>Meet the families, fix the date and celebrate the most beautiful day of your life! Congratulations!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS STORIES ===== -->
+  <section class="success-stories" id="success">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Real Stories</span>
+        <h2 class="section-title">Success <span class="gold-text">Stories</span></h2>
+        <p class="section-subtitle">Thousands of happy couples who found love through ShubhVivah</p>
+      </div>
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-image">
+            <img src="img1.png" alt="Priya & Raj" />
+            <div class="story-overlay">
+              <span>💍 Married 2024</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>Priya & Rajesh</h4>
+            <p class="story-location">📍 Hyderabad → Vijayawada</p>
+            <p class="story-text">"We found each other through ShubhVivah and it was the best decision of our lives. The team was so helpful and supportive throughout the process!"</p>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="story-card featured">
+          <div class="story-image">
+            <img src="img3.png" alt="Anitha & Kumar" />
+            <div class="story-overlay">
+              <span>💍 Married 2023</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>Anitha & Kumar</h4>
+            <p class="story-location">📍 Chennai → Bangalore</p>
+            <p class="story-text">"Within 3 months of registering, we found our perfect match. ShubhVivah's personal matchmaker was incredible and guided us at every step!"</p>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-image">
+            <img src="img4.png" alt="Fatima & Ali" />
+            <div class="story-overlay">
+              <span>💍 Married 2024</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>Fatima & Ali</h4>
+            <p class="story-location">📍 Mumbai → Pune</p>
+            <p class="story-text">"Amazing experience! Completely safe and trustworthy. Our families are so happy. Thank you ShubhVivah for bringing us together!"</p>
+            <div class="story-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANS SECTION ===== -->
+  <section class="plans-section" id="plans">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2 class="section-title">Choose Your <span class="gold-text">Plan</span></h2>
+        <p class="section-subtitle">Affordable plans for every family's needs</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Free</h3>
+            <div class="plan-price"><span class="currency">₹</span>0<span class="period">/month</span></div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ Create Profile</li>
+            <li>✅ Browse 20 Profiles/day</li>
+            <li>✅ Send 5 Interests/day</li>
+            <li>✅ Basic Search Filters</li>
+            <li>❌ Contact Details</li>
+            <li>❌ Chat Access</li>
+            <li>❌ Priority Listing</li>
+          </ul>
+          <button class="btn-plan free" onclick="openModal('registerModal')">Get Started Free</button>
+        </div>
+        <div class="plan-card popular">
+          <div class="popular-badge">🌟 Most Popular</div>
+          <div class="plan-header">
+            <h3>Premium</h3>
+            <div class="plan-price"><span class="currency">₹</span>999<span class="period">/3 months</span></div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ Everything in Free</li>
+            <li>✅ Unlimited Profile Views</li>
+            <li>✅ Contact Details Unlocked</li>
+            <li>✅ Unlimited Messaging</li>
+            <li>✅ Advanced Search Filters</li>
+            <li>✅ Priority Profile Listing</li>
+            <li>❌ Personal Matchmaker</li>
+          </ul>
+          <button class="btn-plan premium" onclick="openModal('paymentModal')">Get Premium</button>
+        </div>
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Elite</h3>
+            <div class="plan-price"><span class="currency">₹</span>2499<span class="period">/6 months</span></div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ Everything in Premium</li>
+            <li>✅ Personal Matchmaker</li>
+            <li>✅ Home Visit Consultation</li>
+            <li>✅ Profile Verification Badge</li>
+            <li>✅ Featured Profile Spot</li>
+            <li>✅ Horoscope Matching</li>
+            <li>✅ 24/7 Priority Support</li>
+          </ul>
+          <button class="btn-plan elite" onclick="openModal('paymentModal')">Get Elite</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gold-text">Us</span></h2>
+        <p class="section-subtitle">We're here to help you find your perfect match</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Office Address</h4>
+              <p>123, MG Road, Banjara Hills,<br>Hyderabad – 500034, Telangana</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h4>Phone Numbers</h4>
+              <p>+91 98765 43210<br>+91 91234 56789</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h4>Email Address</h4>
+              <p>info@shubhvivah.com<br>support@shubhvivah.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn facebook">📘 Facebook</a>
+            <a href="#" class="social-btn instagram">📸 Instagram</a>
+            <a href="#" class="social-btn whatsapp">💬 WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="cName" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="cPhone" placeholder="+91 98765 43210" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="cEmail" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="cSubject">
+                <option>General Inquiry</option>
+                <option>Profile Registration</option>
+                <option>Subscription Plans</option>
+                <option>Matchmaking Services</option>
+                <option>Technical Support</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea id="cMessage" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width">Send Message 📨</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo footer-logo">
+              <span class="logo-icon">💍</span>
+              <span class="logo-text">ShubhVivah</span>
+            </a>
+            <p>India's most trusted marriage bureau helping families find perfect matches for over 25 years.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Instagram">📸</a>
+              <a href="#" aria-label="Twitter">🐦</a>
+              <a href="#" aria-label="YouTube">▶️</a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#profiles">Browse Profiles</a></li>
+              <li><a href="#success">Success Stories</a></li>
+              <li><a href="#plans">Pricing Plans</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Communities</h4>
+            <ul>
+              <li><a href="#profiles">Hindu Matrimony</a></li>
+              <li><a href="#profiles">Muslim Matrimony</a></li>
+              <li><a href="#profiles">Christian Matrimony</a></li>
+              <li><a href="#profiles">Sikh Matrimony</a></li>
+              <li><a href="#profiles">Jain Matrimony</a></li>
+              <li><a href="#profiles">Inter-caste Matrimony</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Report Profile</a></li>
+              <li><a href="#">Safety Tips</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 ShubhVivah Marriage Bureau. All Rights Reserved. Made with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== REGISTER MODAL ===== -->
+  <div class="modal-overlay" id="registerModal" onclick="closeModalOutside(event, 'registerModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('registerModal')">✕</button>
+      <div class="modal-header">
+        <span class="logo-icon">💍</span>
+        <h2>Create Your Profile</h2>
+        <p>Join thousands of families. Free registration!</p>
+      </div>
+      <form class="modal-form" id="registerForm" onsubmit="submitRegister(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" id="rFirstName" placeholder="First Name" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" id="rLastName" placeholder="Last Name" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Profile For *</label>
+            <select id="rFor" required>
+              <option value="">Select</option>
+              <option>Myself</option>
+              <option>Son</option>
+              <option>Daughter</option>
+              <option>Brother</option>
+              <option>Sister</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Gender *</label>
+            <select id="rGender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date of Birth *</label>
+            <input type="date" id="rDob" required />
+          </div>
+          <div class="form-group">
+            <label>Religion *</label>
+            <select id="rReligion" required>
+              <option value="">Select</option>
+              <option>Hindu</option>
+              <option>Muslim</option>
+              <option>Christian</option>
+              <option>Sikh</option>
+              <option>Jain</option>
+              <option>Buddhist</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="rPhone" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="rEmail" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>Create Password *</label>
+          <input type="password" id="rPassword" placeholder="Min 8 characters" minlength="8" required />
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="rAgree" required />
+          <label for="rAgree">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        <button type="submit" class="btn-primary full-width">Create Free Profile 💍</button>
+        <p class="modal-switch">Already have an account? <a href="#" onclick="switchModal('registerModal','loginModal')">Login here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== LOGIN MODAL ===== -->
+  <div class="modal-overlay" id="loginModal" onclick="closeModalOutside(event, 'loginModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+      <div class="modal-header">
+        <span class="logo-icon">💍</span>
+        <h2>Welcome Back!</h2>
+        <p>Login to continue your journey</p>
+      </div>
+      <form class="modal-form" id="loginForm" onsubmit="submitLogin(event)">
+        <div class="form-group">
+          <label>Email / Phone *</label>
+          <input type="text" id="lEmail" placeholder="Email or phone number" required />
+        </div>
+        <div class="form-group">
+          <label>Password *</label>
+          <input type="password" id="lPassword" placeholder="Enter your password" required />
+        </div>
+        <div class="form-row-space">
+          <label class="remember-label">
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn-primary full-width">Login 🔑</button>
+        <p class="modal-switch">New here? <a href="#" onclick="switchModal('loginModal','registerModal')">Create free profile</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== PAYMENT MODAL ===== -->
+  <div class="modal-overlay" id="paymentModal" onclick="closeModalOutside(event, 'paymentModal')">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('paymentModal')">✕</button>
+      <div class="modal-header">
+        <span class="logo-icon">💳</span>
+        <h2>Upgrade Your Plan</h2>
+        <p>Unlock unlimited features and find your match faster!</p>
+      </div>
+      <div class="payment-info">
+        <p>💬 Please contact us to upgrade your plan:</p>
+        <a href="tel:+919876543210" class="btn-primary full-width">📞 Call: +91 98765 43210</a>
+        <a href="https://wa.me/919876543210" class="btn-whatsapp full-width" target="_blank">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROFILE DETAIL MODAL ===== -->
+  <div class="modal-overlay" id="profileModal" onclick="closeModalOutside(event, 'profileModal')">
+    <div class="modal modal-wide">
+      <button class="modal-close" onclick="closeModal('profileModal')">✕</button>
+      <div id="profileModalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
